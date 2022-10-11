@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 
+#pragma warning disable CS0162
+
 namespace Tests.Util
 {
     class PipelineFactory
@@ -27,6 +29,7 @@ namespace Tests.Util
                 {
                     app.UseAuthentication();
 
+
                     app.Use((context, next) =>
                     {
                         var user = context.User;
@@ -39,6 +42,9 @@ namespace Tests.Util
                         {
                             context.Response.StatusCode = 401;
                         }
+
+                        if(false)
+                            return next();
 
                         return Task.CompletedTask;
                     });

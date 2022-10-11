@@ -1,5 +1,9 @@
 # IdentityServer4.AccessTokenValidation
 
+`
+Fork from IdentityServer/IdentityServer4.AccessTokenValidation and add support net6.0
+`
+
 ## Important
 This library is deprecated and not being maintained anymore.
 
