@@ -10,9 +10,9 @@
     <PackageId>IdentityServer4.AccessTokenValidation</PackageId>
     <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer;Bearer tokens</PackageTags>
     <PackageIcon>icon.jpg</PackageIcon>
-    <PackageProjectUrl>https://github.com/IdentityServer/IdentityServer4.AccessTokenValidation</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/3chum/IdentityServer4.AccessTokenValidation</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageReleaseNotes>https://github.com/IdentityServer/IdentityServer4/releases</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/3chum/IdentityServer4/releases</PackageReleaseNotes>
     
     <AssemblyOriginatorKeyFile>../key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>

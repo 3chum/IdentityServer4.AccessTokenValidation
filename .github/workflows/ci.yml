@@ -33,4 +33,4 @@ jobs:
         SignClientSecret: ${{ secrets.SIGNCLIENT }}
       run: |
         ./build.ps1
-        dotnet nuget push .\nuget\*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET }}
+        dotnet nuget push .\artifacts\*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET }}
