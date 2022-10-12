@@ -9,7 +9,7 @@
     <Authors>Brock Allen;Dominick Baier</Authors>
     <PackageId>3Chum.IdentityServer4.AccessTokenValidation</PackageId>
     <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer;Bearer tokens</PackageTags>
-    <PackageIcon>icon.jpg</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://github.com/3chum/IdentityServer4.AccessTokenValidation</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReleaseNotes>https://github.com/3chum/IdentityServer4/releases</PackageReleaseNotes>
