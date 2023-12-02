@@ -19,11 +19,8 @@ namespace IdentityServer4.AccessTokenValidation
 
         /// <inheritdoc />
         public IdentityServerAuthenticationHandler(
-            IOptionsMonitor<IdentityServerAuthenticationOptions> options,
-            ILoggerFactory logger,
-            UrlEncoder encoder,
-            ISystemClock clock)
-            : base(options, logger, encoder, clock)
+            IOptionsMonitor<IdentityServerAuthenticationOptions> options, ILoggerFactory logger, UrlEncoder encoder)
+            : base(options, logger, encoder)
         {
             _logger = logger.CreateLogger<IdentityServerAuthenticationHandler>();
         }

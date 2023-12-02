@@ -212,8 +212,8 @@ namespace IdentityServer4.AccessTokenValidation
                 MapInboundClaims = false
             };
 
-            jwtOptions.SecurityTokenValidators.Clear();
-            jwtOptions.SecurityTokenValidators.Add(handler);
+            jwtOptions.TokenHandlers.Clear();
+            jwtOptions.TokenHandlers.Add(handler);
 
         }
 
