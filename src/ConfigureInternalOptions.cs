@@ -7,14 +7,17 @@ using Microsoft.Extensions.Options;
 
 namespace IdentityServer4.AccessTokenValidation
 {
-    internal class ConfigureInternalOptions : 
-        IConfigureNamedOptions<JwtBearerOptions>,
-        IConfigureNamedOptions<OAuth2IntrospectionOptions>
+    internal class ConfigureInternalOptions
+        : IConfigureNamedOptions<JwtBearerOptions>,
+            IConfigureNamedOptions<OAuth2IntrospectionOptions>
     {
         private readonly IdentityServerAuthenticationOptions _identityServerOptions;
         private string _scheme;
 
-        public ConfigureInternalOptions(IdentityServerAuthenticationOptions identityServerOptions, string scheme)
+        public ConfigureInternalOptions(
+            IdentityServerAuthenticationOptions identityServerOptions,
+            string scheme
+        )
         {
             _identityServerOptions = identityServerOptions;
             _scheme = scheme;
@@ -22,8 +25,10 @@ namespace IdentityServer4.AccessTokenValidation
 
         public void Configure(string name, JwtBearerOptions options)
         {
-            if (name == _scheme + IdentityServerAuthenticationDefaults.JwtAuthenticationScheme &&
-                _identityServerOptions.SupportsJwt)
+            if (
+                name == _scheme + IdentityServerAuthenticationDefaults.JwtAuthenticationScheme
+                && _identityServerOptions.SupportsJwt
+            )
             {
                 _identityServerOptions.ConfigureJwtBearer(options);
             }
@@ -31,17 +36,19 @@ namespace IdentityServer4.AccessTokenValidation
 
         public void Configure(string name, OAuth2IntrospectionOptions options)
         {
-            if (name == _scheme + IdentityServerAuthenticationDefaults.IntrospectionAuthenticationScheme &&
-                _identityServerOptions.SupportsIntrospection)
+            if (
+                name
+                    == _scheme
+                        + IdentityServerAuthenticationDefaults.IntrospectionAuthenticationScheme
+                && _identityServerOptions.SupportsIntrospection
+            )
             {
                 _identityServerOptions.ConfigureIntrospection(options);
             }
         }
 
-        public void Configure(JwtBearerOptions options)
-        { }
+        public void Configure(JwtBearerOptions options) { }
 
-        public void Configure(OAuth2IntrospectionOptions options)
-        { }
+        public void Configure(OAuth2IntrospectionOptions options) { }
     }
 }

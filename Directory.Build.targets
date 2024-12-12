@@ -7,7 +7,7 @@
     <ItemGroup>
       <PackageReference Update="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(FrameworkVersion)"/>
       <PackageReference Update="IdentityModel.AspNetCore.OAuth2Introspection" Version="6.2.0" />
-
+      <PackageReference Update="IdentityModel" Version="7.0.0" />
       <!--build related-->
       <PackageReference Include="MinVer" Version="2.3.0" PrivateAssets="All" />
       <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />

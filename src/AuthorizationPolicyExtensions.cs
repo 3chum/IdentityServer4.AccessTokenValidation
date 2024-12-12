@@ -16,7 +16,10 @@ namespace Microsoft.AspNetCore.Authorization
         /// <param name="builder"></param>
         /// <param name="scope">List of any required scopes. The token must contain at least one of the listed scopes.</param>
         /// <returns></returns>
-        public static AuthorizationPolicyBuilder RequireScope(this AuthorizationPolicyBuilder builder, params string[] scope)
+        public static AuthorizationPolicyBuilder RequireScope(
+            this AuthorizationPolicyBuilder builder,
+            params string[] scope
+        )
         {
             return builder.RequireClaim(JwtClaimTypes.Scope, scope);
         }
@@ -34,9 +37,7 @@ namespace Microsoft.AspNetCore.Authorization
         /// <returns></returns>
         public static AuthorizationPolicy Create(params string[] scopes)
         {
-            return new AuthorizationPolicyBuilder()
-                .RequireScope(scopes)
-                .Build();
+            return new AuthorizationPolicyBuilder().RequireScope(scopes).Build();
         }
     }
 }

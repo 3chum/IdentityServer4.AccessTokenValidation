@@ -33,6 +33,7 @@
   </ItemGroup>
   
   <ItemGroup>
+    <PackageReference Include="IdentityModel"/>
     <PackageReference Include="IdentityModel.AspNetCore.OAuth2Introspection"/>
     
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer"/>
